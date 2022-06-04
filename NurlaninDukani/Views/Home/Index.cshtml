@@ -45,30 +45,17 @@
     <div class="row"
          style="  width: 80%;
       margin: 0 auto;">
-        <figure class="item">
+        @foreach (var item in Model.Brands)
+        {
+           <figure class="item">
             <a href="HTML/info.html">
-                <img src="./Images/img-Nike1.jpg" alt="" width="100%" />
-                <figcaption>Nike Run +</figcaption>
+                <img src="~/brands/@item.Image" alt="" width="100%" />
+                <figcaption>@item.Name</figcaption>
             </a>
-        </figure>
-        <figure class="item">
-            <a href="HTML/info.html">
-                <img src="./Images/img-Nike3.jpg" alt="" width="100%" />
-                <figcaption>Nike Air Blue</figcaption>
-            </a>
-        </figure>
-        <figure class="item">
-            <a href="HTML/info.html">
-                <img src="./Images/img-Nike5.jpg" width="100%" />
-                <figcaption>Casual Nike</figcaption>
-            </a>
-        </figure>
-        <figure class="item">
-            <a href="HTML/info.html">
-                <img src="./Images/img-Nike10.jpg" alt="" width="100%" />
-                <figcaption>Nike Air Orange</figcaption>
-            </a>
-        </figure>
+        </figure> 
+        }
+        
+        
     </div>
 </section>
 

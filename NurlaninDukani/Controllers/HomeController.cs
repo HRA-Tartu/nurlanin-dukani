@@ -12,10 +12,14 @@ namespace NurlaninDukani.Controllers
     public class HomeController : Controller
     {
         private readonly ApplicationDbContext _context;
+
         public HomeController(ApplicationDbContext context)
         {
             _context = context;
         }
+
+        public List<Brand> Brands { get; private set; }
+
         /// <summary>
         /// Ana səhifənin view-su üçün nəzərdə tutulmuş action. Viewmodel məntiqi
         /// ilə səhifədə olan dinamik informasiyalar gələcəkdir.
@@ -25,6 +29,8 @@ namespace NurlaninDukani.Controllers
         {
            
             HomeVm vm = new HomeVm();
+
+            vm.Brands = _context.Brands.ToList();
             return View(vm);
         }
     }
