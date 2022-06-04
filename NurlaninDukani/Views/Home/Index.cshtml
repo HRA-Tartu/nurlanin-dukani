@@ -4,40 +4,26 @@
     <div class="row"
          style="width: 80%;
       margin: 0 auto;">
-        <div class="col">
-            <div class="overlay-image">
-                <a href="HTML/men.html">
-                    <img class="image" src="./Images/img-men6.jpg" alt="Alt text" />
-                    <div class="normal">
-                        <div class="text">MEN</div>
-                    </div>
-                    <div class="hover">
-                        <img class="image"
-                             src="./Images/img-Nike12.jpg"
+        @foreach (var hover in Model.productCategories)
+        {
+            <div class="col">
+                <div class="overlay-image">
+                    <a href="HTML/men.html">
+                        <img class="image" src="./Images/@hover.BackgroundImage" alt="Alt text" />
+                        <div class="normal">
+                            <div class="text">@hover.Name</div>
+                        </div>
+                        <div class="hover">
+                            <img class="image"
+                             src="./Images/@hover.HoverImage"
                              alt="Alt text hover" />
-                        <div class="text">MEN</div>
-                    </div>
-                </a>
+                            <div class="text">@hover.Name</div>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="overlay-image">
-                <a href="HTML/women.html">
-                    <img class="image"
-                         src="./Images/img-women5.jpeg"
-                         alt="Alt text" />
-                    <div class="normal">
-                        <div class="text">WOMEN</div>
-                    </div>
-                    <div class="hover">
-                        <img class="image"
-                             src="./Images/img-women6.jpeg"
-                             alt="Alt text hover" />
-                        <div class="text">WOMEN</div>
-                    </div>
-                </a>
-            </div>
-        </div>
+        }
+
     </div>
 </section>
 <section class="preview">

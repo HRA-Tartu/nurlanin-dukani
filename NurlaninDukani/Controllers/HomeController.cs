@@ -25,6 +25,7 @@ namespace NurlaninDukani.Controllers
         {
            
             HomeVm vm = new HomeVm();
+            vm.productCategories = _context.ProductCategories.ToList();
             return View(vm);
         }
     }
