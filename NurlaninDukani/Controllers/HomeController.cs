@@ -59,6 +59,8 @@ namespace NurlaninDukani.Controllers
 
            // colors
 
+
+
             return View();
         }
     }
